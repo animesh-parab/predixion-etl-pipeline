@@ -1,0 +1,6 @@
+call_hour,total_calls,callback_calls,callback_rate_pct
+22,11,5,45.45
+6,11,5,45.45
+10,12,5,41.67
+23,22,8,36.36
+11,13,4,30.77

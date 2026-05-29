@@ -1,0 +1,4 @@
+duration_bucket,total_calls,pct_of_total,avg_amount_promised
+short,14,3.62,21879.15
+medium,113,29.2,18936.07
+long,260,67.18,17854.13

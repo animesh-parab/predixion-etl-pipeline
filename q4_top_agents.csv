@@ -1,0 +1,4 @@
+agent_id,total_calls,connected,no_answer,dropped,callback_requested,connect_rate_pct
+AGT016,27,13,3,4,7,48.1
+AGT018,26,3,13,9,1,11.5
+AGT011,23,8,5,4,6,34.8
