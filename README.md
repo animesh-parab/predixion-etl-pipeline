@@ -4,24 +4,28 @@ End-to-end ETL pipeline that ingests raw, messy voice agent call logs, transform
 
 **Tech stack:** Python 3.10+ · Pandas · SQLite (`sqlite3`) · No cloud, no Spark.
 
+> 📄 **See [WRITEUP.md](./WRITEUP.md) for the Business & Architecture Write-Up** — design decisions, trade-offs, and what this pipeline would look like at scale.
+
 ---
 
 ## Repository Structure
 
 ```
-trading_bot/
-├── generate.py          # Phase 1 — Generate 500 raw call records → raw_calls.json
-├── pipeline.py          # Phase 2 — Ingest, validate, transform, load → predixion.db
-├── queries.py           # Phase 3 — Analytics: 5 business questions → CSV outputs
-├── raw_calls.json       # Generated raw data (created by generate.py)
-├── predixion.db         # SQLite database (created by pipeline.py)
-├── rejected_log.csv     # Rejected records with reasons (created by pipeline.py)
+predixion-etl-pipeline/
+├── generate.py           # Phase 1 — Generate 500 raw call records → raw_calls.json
+├── pipeline.py           # Phase 2 — Ingest, validate, transform, load → predixion.db
+├── queries.py            # Phase 3 — Analytics: 5 business questions → CSV outputs
+├── raw_calls.json        # Generated raw data (created by generate.py)
+├── predixion.db          # SQLite database (created by pipeline.py)
+├── rejected_log.csv      # Rejected records with reasons (created by pipeline.py)
 ├── q1_connect_rate.csv
 ├── q2_callback_hours.csv
 ├── q3_long_duration.csv
 ├── q4_top_agents.csv
 ├── q5_volume_trend.csv
-└── requirements_predixion.txt
+├── requirements.txt
+├── README.md
+└── WRITEUP.md            # Business & architecture write-up
 ```
 
 ---
@@ -30,8 +34,8 @@ trading_bot/
 
 **1. Clone the repo and navigate to the project folder:**
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd trading_bot
+git clone https://github.com/animesh-parab/predixion-etl-pipeline.git
+cd predixion-etl-pipeline
 ```
 
 **2. Create and activate a virtual environment:**
@@ -47,7 +51,7 @@ source venv/bin/activate
 
 **3. Install dependencies:**
 ```bash
-pip install -r requirements_predixion.txt
+pip install -r requirements.txt
 ```
 
 ---
